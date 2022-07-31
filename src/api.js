@@ -61,7 +61,7 @@ export const getEvents = async () => {
     if (token) {
         removeQuery();
         // eslint-disable-next-line
-        const url = 'https://xawcwdf470.execute-api.eu-central-1.amazonaws.com/dev/api/get-events' + '/' + token;
+        const url = ' https://xawcwdf470.execute-api.eu-central-1.amazonaws.com/dev/api/get-events' + '/' + token;
         const result = await axios.get(url);
 
         if (result.data) {
