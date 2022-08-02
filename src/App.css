@@ -47,24 +47,34 @@ input[type="number"] {
 }
 
 .city {
+  width: 250px;
+}
+
+.CitySearch {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 300px;
+  max-width: 300px;
+  margin: auto;
+  position: relative;
+}
+
+.numberOfEvents {
+  width: 200px;
+  margin: 20px auto;
+  text-align: center;
+}
+/*.city {
   grid-column: 2 / span 1;
 }
 
 .number {
   grid-column: 3 / span 1;
-}
+} 
 
 .appTitle {
   grid-column: 1 / span 1;
-}
-
-/* .CitySearch {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  align-items: flex-start;
 } */
-
 
 .suggestions {
   position: absolute;
