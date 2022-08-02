@@ -105,12 +105,12 @@ class App extends Component {
     return (
       <>
         <div className='topBar'>
-          <h4 className='appTitle'>Meet App</h4>
-          <CitySearch locations={locations} updateEvents={this.updateEvents} />
-          <NumberOfEvents updateNumberOfEvents={this.updateNumberOfEvents} />
+          <h4 className='appTitle'>Meet App</h4>  
         </div>
         <div className="App">
           <WarningAlert id='warningAlert' text={warningText} />
+          <CitySearch locations={locations} updateEvents={this.updateEvents} />
+          <NumberOfEvents updateNumberOfEvents={this.updateNumberOfEvents} />
           <div className='data-vis-wrapper'>
             <EventGenre events={events} />
             <ResponsiveContainer height={400} >
