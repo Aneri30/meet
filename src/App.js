@@ -104,10 +104,13 @@ class App extends Component {
     if (showWelcomeScreen === undefined) return <div className="App" />
     return (
       <>
-        <div className="App">
-          <WarningAlert id='warningAlert' text={warningText} />
+        <div className='topBar'>
+          <h4 className='appTitle'>Meet App</h4>
           <CitySearch locations={locations} updateEvents={this.updateEvents} />
           <NumberOfEvents updateNumberOfEvents={this.updateNumberOfEvents} />
+        </div>
+        <div className="App">
+          <WarningAlert id='warningAlert' text={warningText} />
           <div className='data-vis-wrapper'>
             <EventGenre events={events} />
             <ResponsiveContainer height={400} >
