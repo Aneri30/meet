@@ -16,21 +16,21 @@ class Event extends Component {
     render() {
         return (
             <div className='event'>
-                <h4 className='event-title'>{this.props.event.summary}</h4>
-                <p className='event-time'>{this.props.event.start.dateTime}</p>
-                <p className='event-location'>{this.props.event.location}</p>
-                <a href={this.props.event.htmlLink} rel="noreferrer" target="_blank">
-                    See details on Google Calendar
-                </a>
-                <div>
-                {!this.state.showDetails && <button className='showDetails-button' onClick={this.handleShowDetails}>Show details</button>}
-                {this.state.showDetails && <p className='event-details'>{this.props.event.description}</p> }
-                {this.state.showDetails && <button className='hideDetails-button' onClick={this.handleHideDetails}>Hide details</button>}
+                <a href="https://placeholder.com"><img src="https://via.placeholder.com/200" alt='Placeholder for event' /></a>
+                <div className='event-info'>
+                    <h4 className='event-title'>{this.props.event.summary}</h4>
+                    <p className='event-time'>{this.props.event.start.dateTime}</p>
+                    <p className='event-location'>{this.props.event.location}</p>
+                     <a href={this.props.event.htmlLink} rel="noreferrer" target="_blank">
+                        See details on Google Calendar
+                    </a>
+                    {!this.state.showDetails && <button className='showDetails-button' onClick={this.handleShowDetails}>Show details</button>}
+                    {this.state.showDetails && <p className='event-details'>{this.props.event.description}</p>}
+                    {this.state.showDetails && <button className='hideDetails-button' onClick={this.handleHideDetails}>Hide details</button>}
                 </div>
-                
             </div>
         )
     }
 }
-
 export default Event;
+
