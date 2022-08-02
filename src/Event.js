@@ -1,3 +1,4 @@
+import { toBeVisible } from '@testing-library/jest-dom/dist/matchers';
 import React, { Component } from 'react';
 
 class Event extends Component {
@@ -16,13 +17,19 @@ class Event extends Component {
     render() {
         return (
             <div className='event'>
-            <h4 className='event-title'>{this.props.event.summary}</h4>
-            <p className='event-time'>{this.props.event.start.dateTime}</p>
-            <p className='event-location'>{this.props.event.location}</p>
-            {!this.state.showDetails && <button className='showDetails-button' onClick={this.handleShowDetails}>Show details</button>}
-            {this.state.showDetails && <p className='event-details'>{this.props.event.description}</p>}
-            {this.state.showDetails && <button className='hideDetails-button' onClick={this.handleHideDetails}>Hide details</button>}
-        </div>
+                <h4 className='event-title'>{this.props.event.summary}</h4>
+                <p className='event-time'>{this.props.event.start.dateTime}</p>
+                <p className='event-location'>{this.props.event.location}</p>
+                <a href={this.props.event.htmlLink} rel="noreferrer" target="_blank">
+                    See details on Google Calendar
+                </a>
+                <div>
+                {!this.state.showDetails && <button className='showDetails-button' onClick={this.handleShowDetails}>Show details</button>}
+                {this.state.showDetails && <p className='event-details'>{this.props.event.description}</p> }
+                {this.state.showDetails && <button className='hideDetails-button' onClick={this.handleHideDetails}>Hide details</button>}
+                </div>
+                
+            </div>
         )
     }
 }
