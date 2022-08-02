@@ -1,4 +1,3 @@
-import { toBeVisible } from '@testing-library/jest-dom/dist/matchers';
 import React, { Component } from 'react';
 
 class Event extends Component {
