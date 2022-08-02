@@ -24,6 +24,12 @@ p {
   display: block;
 }
 
+.topBar {
+  text-align: center;
+  padding: 2% 5%;
+  background-color: #fff;
+}
+
 input[type="text"],
 input[type="number"] {
   padding: 8px 6px 8px 10px;
@@ -86,14 +92,19 @@ input[type="number"] {
   position: relative;
 }
 
-.details-btn {
+.showDetails-button,
+.hideDetails-button {
   position: absolute;
+  float: right;
   right: 5px;
   bottom: 5px;
-  padding: 5px 8px;
-  border-radius: 5px;
-  outline: none;
+  padding: 5px 12px;
   cursor: pointer;
+  background-color: black;
+  color: white;
+  height: 36px;
+  border-radius: 3px white;
+  font-weight: 600;
 }
 
 .name {
